@@ -1,35 +1,58 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+ const playlists = [
+                { name: "🎸 Rock Clásico",image:'https://unavatar.io/x/ironman', songs: ["Bohemian Rhapsody", "Hotel California", "Sweet Child O' Mine", "Smoke on the Water", "Stairway to Heaven", "Back in Black", "Livin' on a Prayer"] },
+                { name: "🔥 Pop Hits",image:"https://unavatar.io/x/kikobeats", songs: ["Blinding Lights", "Levitating", "As It Was", "Bad Guy", "Shake It Off", "Roar", "Uptown Funk"] },
+                { name: "💃 Reggaetón",image:"https://unavatar.io/x/elk", songs: ["Safaera", "Dákiti", "Felices Los 4", "Tusa", "Vete", "Bichota", "Yo Perreo Sola"] },
+                { name: "🎶 Indie Vibes",image:"https://unavatar.io/x/mariobros", songs: ["Sweater Weather", "Electric Feel", "Home", "Breezeblocks", "Take a Walk", "Mountain Sound", "Little Talks"] }
+            ];
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+     <div className="app">
+                    <h1>🎧 Mini Spotify Clone</h1>
+                    {playlists.map((playlist, index) => (
+                        <Playlist
+                         key={index}
+                        name={playlist.name} 
+                        songs={playlist.songs}
+                        style={{ backgroundImage: `url(${playlist.image})`}}
+                        />
+                    ))}
+                </div>
+   
     </>
   )
+}
+
+function Playlist({ name, songs, style}) {
+  return (
+      <div className="playlist" style={style}>
+          <h2>{name}</h2>
+          <ul>
+              {songs.map((song, index) => (
+                  <Song key={index} name={song} />
+              ))}
+          </ul>
+        <Reproductor/>
+        </div>
+  );
+}
+
+function Song({ name }) {
+  return <li className="song">{name}</li>;
+}
+
+function Reproductor(){
+return(
+<div className='reproductor'>
+<span></span>
+</div>
+)
 }
 
 export default App
