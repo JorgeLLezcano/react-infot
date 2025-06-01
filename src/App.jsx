@@ -64,10 +64,10 @@ function NavBar(){
 <div className='navBar'>
   <h2>categori</h2>
   <ul>
-    <li>Rock</li>
-    <li>Pop</li>
-    <li>Reggaetón</li>
-    <li>Indie</li>
+    <li>🎸 Rock Clásico</li>
+    <li>🔥 Pop Hits</li>
+    <li>💃 Reggaetó</li>
+    <li>🎶 Indie Vibes"</li>
   </ul>
 
 </div>
