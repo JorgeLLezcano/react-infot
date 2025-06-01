@@ -1,6 +1,6 @@
 import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
+import playLogo from '/play.svg'
 import './App.css'
 
 function App() {
@@ -13,7 +13,9 @@ function App() {
 
   return (
     <>
+    
      <div className="app">
+     <NavBar/>
                     <h1>🎧 Mini Spotify Clone</h1>
                     {playlists.map((playlist, index) => (
                         <Playlist
@@ -51,8 +53,26 @@ function Reproductor(){
 return(
 <div className='reproductor'>
 <span></span>
+<div  className='btn-play'>
+<img src={playLogo}/>
+</div>
 </div>
 )
+}
+function NavBar(){
+  return(
+<div className='navBar'>
+  <h2>categori</h2>
+  <ul>
+    <li>Rock</li>
+    <li>Pop</li>
+    <li>Reggaetón</li>
+    <li>Indie</li>
+  </ul>
+
+</div>
+
+  )
 }
 
 export default App
