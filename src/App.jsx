@@ -25,8 +25,9 @@ function App() {
                         style={{ backgroundImage: `url(${playlist.image})`}}
                         />
                     ))}
+                 
                 </div>
-   
+                
     </>
   )
 }
@@ -40,7 +41,7 @@ function Playlist({ name, songs, style}) {
                   <Song key={index} name={song} />
               ))}
           </ul>
-        <Reproductor/>
+          <Reproductor/> 
         </div>
   );
 }
@@ -62,17 +63,29 @@ return(
 function NavBar(){
   return(
 <div className='navBar'>
-  <h2>categori</h2>
+  <h2>category</h2>
   <ul>
-    <li>🎸 Rock Clásico</li>
+    <li>🎸Rock Clásico</li>
     <li>🔥 Pop Hits</li>
     <li>💃 Reggaetó</li>
     <li>🎶 Indie Vibes"</li>
   </ul>
-
+  <ReproductorGral/> 
 </div>
 
   )
 }
+
+function ReproductorGral(){
+  return(
+    <div className='reproductor-gral'>
+    <span></span>
+    <div  className='btn-play'>
+    <img src={playLogo}/>
+    </div>
+    </div>
+  )
+}
+
 
 export default App

@@ -194,7 +194,7 @@ left: 100%;
 
 .navBar{
   grid-area: 2 / 1 / 4 / 2;
-  /* position: absolute; */
+   position: relative;
     /* left: 10px; */
     height: 100%;
     border-radius: 10px;
@@ -219,4 +219,42 @@ left: 100%;
   display: flex;
   justify-content: flex-start;
 
+}
+.reproductor-gral{
+  display: flex;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  bottom: 10px;
+  align-items: center;
+}
+.reproductor-gral .btn-play{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #073a03cc;
+  padding: 2px;
+  fill:black;
+  
+}
+
+.reproductor-gral span{
+  position: relative;
+  width: 150px;
+  height: 5px;
+  background-color: #333;
+  overflow: hidden;
+}
+span::before{
+  content: '';
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, transparent, #ff4081, #00bcd4);
+  box-shadow: 0px 0px 10px #ff4081, 0 0 20px #0492a5;
+  animation: neon 1.5s ease-in-out infinite;
 }
