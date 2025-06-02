@@ -39,6 +39,22 @@
 
 .read-the-docs {
   color: #888;
+
+  estructura de referecia de grid layout
+  .parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+  
+  .div1 { grid-area: 2 / 1 / 4 / 2; }
+  .div2 { grid-area: 2 / 2 / 3 / 3; }
+  .div3 { grid-area: 2 / 3 / 3 / 4; }
+  .div4 { grid-area: 3 / 2 / 4 / 3; }
+  .div5 { grid-area: 3 / 3 / 4 / 4; }
+  .div6 { grid-area: 1 / 1 / 2 / 4; }
 } */
 
 
@@ -52,21 +68,22 @@
             justify-content: center;
         }
 .app {
-      display: grid
-;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-content: center;
-    /* align-items: center; */
-    justify-items: center;
-    height: 100%;
+   
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-column-gap: 10px;
+grid-row-gap: 10px;
+        height: 100vh;
 }
 
 
         .app h1 {
+          grid-area: 1 / 1 / 2 / 4; 
             margin-top: 20px;
             font-size: 24px;
-            position: absolute;
+            /*position: absolute;*/
+            width: 100%;
         }
 
         .playlist {
@@ -176,8 +193,9 @@ left: 100%;
 }
 
 .navBar{
-  position: absolute;
-    left: 10px;
+  grid-area: 2 / 1 / 4 / 2;
+  /* position: absolute; */
+    /* left: 10px; */
     height: 100%;
     border-radius: 10px;
     display: flex;
