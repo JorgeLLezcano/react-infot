@@ -70,22 +70,12 @@ function NavBar(){
     <li>💃 Reggaetó</li>
     <li>🎶 Indie Vibes"</li>
   </ul>
-  <ReproductorGral/> 
+  <Reproductor /> 
 </div>
 
   )
 }
 
-function ReproductorGral(){
-  return(
-    <div className='reproductor-gral'>
-    <span></span>
-    <div  className='btn-play'>
-    <img src={playLogo}/>
-    </div>
-    </div>
-  )
-}
 
 
 export default App
