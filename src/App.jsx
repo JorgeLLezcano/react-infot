@@ -1,6 +1,10 @@
 import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 import playLogo from '/play.svg'
+import Playlist from './Playlist'
+import NavBar from './NavBar'
+// import Song from './Song'
+import Reproductor from './Reproductor'
 import './App.css'
 
 function App() {
@@ -31,51 +35,51 @@ function App() {
     </>
   )
 }
-
-function Playlist({ name, songs, style}) {
-  return (
-      <div className="playlist" style={style}>
-          <h2>{name}</h2>
-          <ul>
-              {songs.map((song, index) => (
-                  <Song key={index} name={song} />
-              ))}
-          </ul>
-          <Reproductor/> 
-        </div>
-  );
-}
-
-function Song({ name }) {
-  return <li className="song">{name}</li>;
-}
-
-function Reproductor(){
-return(
-<div className='reproductor'>
-<span></span>
-<div  className='btn-play'>
-<img src={playLogo}/>
-</div>
-</div>
-)
-}
-function NavBar(){
-  return(
-<div className='navBar'>
-  <h2>category</h2>
-  <ul>
-    <li>🎸Rock Clásico</li>
-    <li>🔥 Pop Hits</li>
-    <li>💃 Reggaetó</li>
-    <li>🎶 Indie Vibes"</li>
-  </ul>
-  <Reproductor /> 
-</div>
-
-  )
-}
-
-
-
 export default App
+// function Playlist({ name, songs, style}) {
+//   return (
+//       <div className="playlist" style={style}>
+//           <h2>{name}</h2>
+//           <ul>
+//               {songs.map((song, index) => (
+//                   <Song key={index} name={song} />
+//               ))}
+//           </ul>
+//           <Reproductor/> 
+//         </div>
+//   );
+// }
+
+// function Song({ name }) {
+//   return <li className="song">{name}</li>;
+// }
+
+// function Reproductor(){
+// return(
+// <div className='reproductor'>
+// <span></span>
+// <div  className='btn-play'>
+// <img src={playLogo}/>
+// </div>
+// </div>
+// )
+// }
+// function NavBar(){
+//   return(
+// <div className='navBar'>
+//   <h2>category</h2>
+//   <ul>
+//     <li>🎸Rock Clásico</li>
+//     <li>🔥 Pop Hits</li>
+//     <li>💃 Reggaetó</li>
+//     <li>🎶 Indie Vibes"</li>
+//   </ul>
+//   <Reproductor /> 
+// </div>
+
+//   )
+// }
+
+
+
+
