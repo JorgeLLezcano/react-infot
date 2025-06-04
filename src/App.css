@@ -59,31 +59,62 @@
 
 
 
-  body {
-            font-family: Arial, sans-serif;
-            text-align: center;
+ html, body {
+            font-family: Arial, sans-serif; 
+            
             background-color: #076e15;;
             color: white;
             display: flex;
             justify-content: center;
+            height: 100vh;
+            /* box-sizing: border-box;
+            margin: 0;
+            padding: 0;  */
+            /* text-align: center;  */
+        }
+html,body {
+           /* height: 100vh;
+            font-family: Arial, sans-serif;
+          
+            background-color: #444;;
+            color: white;
+            display: flex;
+            justify-content: center;
+            margin:0; */
+          /* overflow: hidden; */
         }
 .app {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows:50px repeat(3, 1fr);
+  gap: 8px;
+   height: 100vh;
+  align-content: center;
+  /* overflow:hidden; */
    
-display: grid;
+/* display: grid;
 grid-template-columns: repeat(3, 1fr);
 grid-template-rows: repeat(3, 1fr);
 grid-column-gap: 10px;
 grid-row-gap: 10px;
         height: 100vh;
+        box-sizing: border-box;
+            margin: 0;
+            padding: 0; */
 }
 
 
         .app h1 {
-          grid-area: 1 / 1 / 2 / 4; 
+          grid-column: span 2 / span 2;
+          margin-top: 20px;
+          font-size: 24px;
+          height:50px;
+
+          /* grid-area: 1 / 1 / 2 / 4; 
             margin-top: 20px;
-            font-size: 24px;
-            /*position: absolute;*/
-            width: 100%;
+            font-size: 24px; */
+            /*position: absolute;
+            width: 100%;*/
         }
 
         .playlist {
@@ -92,13 +123,15 @@ grid-row-gap: 10px;
           flex-direction: column;
           align-items: center;
             background: #083d03;
-            padding: 15px;
+            /* padding: 15px; */
             /* margin: 10px auto; */
             width: 200px;
-            height: 300px;
+            /* height: 300px; */
             border-radius: 10px;
            position: relative;
            transition: all 1s linear;
+           background-size:cover;
+           background-position: bottom;
            /* mask-image: linear-gradient(transparent, rgb(0, 0, 0) 49%); */
            
         }
@@ -117,15 +150,20 @@ grid-row-gap: 10px;
         .playlist h2 {
             margin-bottom: 10px;
             font-size: 18px;
+            backdrop-filter: blur(53px);
+            width: 100%;
         }
 
         .song {
             list-style: none;
             padding: 5px;
             border-bottom: 1px solid #444;
+            transition: all .5s linear;
+          
         }
         .song:hover {
             background-color: #333;
+            backdrop-filter: blur(53px);
         }
 
         .playlist:hover .reproductor{
@@ -146,6 +184,7 @@ grid-row-gap: 10px;
     justify-content: space-around;
     bottom: 5px;
     transition: all .5s linear;
+    pointer-events: none;
 }
 .reproductor .btn-play{
   display: flex;
@@ -193,10 +232,18 @@ left: 100%;
 }
 
 .navBar{
-  grid-area: 2 / 1 / 4 / 2;
+  grid-row: span 3 / span 3;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  display:flex;
+ 
+  flex-direction:column;
+  background-color: rgba(128, 128, 128, 0.5);
+  position:relative;
+  /* grid-area: 2 / 1 / 4 / 2;
    position: relative;
     /* left: 10px; */
-    height: 100%;
+    /*height: 100%;
     border-radius: 10px;
     display: flex;
     list-style: none;
@@ -204,6 +251,10 @@ left: 100%;
     justify-content: flex-start;
     align-items: center;
     background-color: #083d03;
+    overflow: hidden; */
+}
+.navBar h2{
+  text-align: center; 
 }
 .navBar ul{
   display: flex;
@@ -212,13 +263,22 @@ left: 100%;
       align-items: flex-start;
       height: 100%;
       width: 100%;
-      gap: 10px;
+     
 }
 .navBar li{
   list-style: none;
   display: flex;
   justify-content: flex-start;
+ transition: all .5s linear;
+ width: 100%;
+padding:5px;
+}
 
+
+
+
+.navBar li:hover{
+  background-color: #076e15;;
 }
 
 
