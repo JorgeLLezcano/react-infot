@@ -10,7 +10,7 @@ import './App.css'
 function App() {
  const playlists = [
                 { name: "🎸 Rock Clásico",image:'https://unavatar.io/x/ironman', songs: ["Bohemian Rhapsody", "Hotel California", "Sweet Child O' Mine", "Smoke on the Water", "Stairway to Heaven", "Back in Black", "Livin' on a Prayer"] },
-                { name: "🔥 Pop Hits",image:"https://unavatar.io/x/kikobeats", songs: ["Blinding Lights", "Levitating", "As It Was", "Bad Guy", "Shake It Off", "Roar", "Uptown Funk"] },
+                { name: "🔥 Pop Hits",image:"https://unavatar.io/x/billieeilish", songs: ["Blinding Lights", "Levitating", "As It Was", "Bad Guy", "Shake It Off", "Roar", "Uptown Funk"] },
                 { name: "💃 Reggaetón",image:"https://unavatar.io/x/elk", songs: ["Safaera", "Dákiti", "Felices Los 4", "Tusa", "Vete", "Bichota", "Yo Perreo Sola"] },
                 { name: "🎶 Indie Vibes",image:"https://unavatar.io/x/mariobros", songs: ["Sweater Weather", "Electric Feel", "Home", "Breezeblocks", "Take a Walk", "Mountain Sound", "Little Talks"] }
             ];
